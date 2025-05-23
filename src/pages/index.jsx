@@ -21,7 +21,11 @@ class Template extends React.Component {
         <Helmet
           title={'UnifiedForce'}
           link={[
-            { rel: 'icon', type: 'image/x-icon', href: 'favicon_io/favicon.ico' },
+            {
+              rel: 'icon',
+              type: 'image/x-icon',
+              href: 'favicon_io/favicon.ico',
+            },
             {
               rel: 'icon',
               type: 'image/png',
@@ -55,7 +59,7 @@ class Template extends React.Component {
             },
             {
               property: 'og:title',
-              content: data.title,
+              content: data.title_meta,
             },
             {
               property: 'og:description',
@@ -92,7 +96,7 @@ class Template extends React.Component {
             },
             {
               name: 'twitter:title',
-              content: data.title,
+              content: data.title_meta,
             },
             {
               name: 'twitter:description',
@@ -109,7 +113,7 @@ class Template extends React.Component {
           ]}
         />
         <Header
-          title={data.title}
+          title={data.title_meta}
           journal={data.journal}
           conference={data.conference}
           authors={data.authors}
