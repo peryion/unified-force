@@ -1,76 +1,141 @@
 theme: classic # default || classic || dark
 organization: Pixel Genius Labs
 twitter: '@denkivvakame'
-# title: '<span style="color: #BA8DE2; font-variant: small-caps; font-weight: bold;">ManipTrans</span>: Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning'
-# title: "<span style='color: #BA8DE2; font-family: 'Times New Roman', Times, serif; font-variant: small-caps; font-weight: bold;'>ManipTrans</span>: Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning"
-title: "<span style='font-family: \"Times New Roman\", Times, serif;'><div><span style=' background-color: white; border: 2px solid white; border-radius: 10px; padding: 0 5px; font-variant: small-caps; font-weight: bold; font-size: 1.5em;'><span style='color: #969b91;'>Manip</span><span style='color: #f5b98c;'>Trans</span></span></div>Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning</span>"
-journal: "CVPR'25"
+# title: '<span style="color: #BA8DE2; font-variant: small-caps; font-weight: bold;">UnifiedForce</span>: Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning'
+# title: "<span style='color: #BA8DE2; font-family: 'Times New Roman', Times, serif; font-variant: small-caps; font-weight: bold;'>UnifiedForce</span>: Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning"
+title: '<span style=''font-family: "Times New Roman", Times, serif;''><div><span style='' background-color: white; border: 2px solid white; border-radius: 10px; padding: 0 5px; font-variant: small-caps; font-weight: bold; font-size: 1.5em;''><span style=''color: #969b91;''>Manip</span><span style=''color: #f5b98c;''>Trans</span></span></div>Learning Unified Force and Position Control for Legged Loco-Manipulation</span>'
+journal: ''
 resources:
-  paper: https://arxiv.org/abs/2503.21860
-  arxiv: https://arxiv.org/abs/2503.21860
-  code: https://github.com/ManipTrans/ManipTrans.git
+  paper: https://unifid_force.github.io/
+  arxiv: https://unifid_force.github.io/
+  code: https://unifid_force.github.io/
   # video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
   demo: # https://colab.research.google.com/
-  huggingface: https://huggingface.co/datasets/LiKailin/DexManipNet
 description: academic projectpage template that supports markdown and KaTeX
 
 image: https://denkiwakame.github.io/academic-project-template/teaser.jpg
 url: https://denkiwakame.github.io/academic-project-template
 speakerdeck: # speakerdeck slide ID
 authors:
-  - name: Kailin Li
+  - name: Peiyuan Zhi
     affiliation: [1]
-    url: https://kailinli.top
+    url: https://scholar.google.com/citations?user=p1JGJNwAAAAJ&hl=en
     position: Researcher
-  - name: Puhao Li
+  - name: Peiyang Li
     affiliation: [1, 2]
     position: Research Intern
-    url: https://xiaoyao-li.github.io/
-  - name: Tengyu Liu
+    url: https://unifid_force.github.io/
+  - name: Jianqin Yin
+    affiliation: [2]
+    position: Researcher
+    url: https://unifid_force.github.io/
+  - name: Baoxiong Jia
     affiliation: [1]
     position: Researcher
-    url: https://tengyu.ai/
-  - name: Yuyang Li
-    affiliation: [1, 3]
-    position: Research Intern
-    url: https://yuyangli.com/
+    url: https://buzz-beater.github.io/
   - name: Siyuan Huang
     affiliation: [1]
     position: Researcher
     url: https://siyuanhuang.com/
 affiliations:
   - Beijing Institute for General Artificial Intelligence (BIGAI)
-  - Department of Automation, Tsinghua University
-  - Institute for Artificial Intelligence, Peking University
 # meta:
 #   - '*work done while she was interning at Pixel Genius Lab.'
 bibtex: >
   @inproceedings{li2025maniptrans,
-    title={ManipTrans: Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning},
+    title={UnifiedForce: Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning},
     author={Li, Kailin and Li, Puhao and Liu, Tengyu and Li, Yuyang and Huang, Siyuan},
     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
     year={2025}
   }
 
-teaser: teaser.mp4
+teaser: Corl_PF_web_.mp4
 abstract: |
-  Human hands play a central role in interacting, motivating increasing research in dexterous robotic manipulation. Data-driven embodied AI algorithms demand precise, large-scale, human-like manipulation sequences, which are challenging to obtain with conventional reinforcement learning or real-world teleoperation. To address this, we introduce <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>ManipTrans</span>, a novel two-stage method for efficiently transferring human bimanual skills to dexterous robotic hands in simulation. <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>ManipTrans</span> first pre-trains a generalist trajectory imitator to mimic hand motion, then fine-tunes a specific residual module under interaction constraints, enabling efficient learning and accurate execution of complex bimanual tasks.
-    Experiments show that <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>ManipTrans</span> surpasses state-of-the-art methods in success rate, fidelity, and efficiency. Leveraging <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>ManipTrans</span>, we transfer multiple hand-object datasets to robotic hands, creating <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>DexManipNet</span>, a large-scale dataset featuring previously unexplored tasks like pen capping and bottle unscrewing. <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>DexManipNet</span> comprises 3.3K episodes of robotic manipulation and is easily extensible, facilitating further policy training for dexterous hands and enabling real-world deployments.
-
+  Robotic loco-manipulation tasks often involve contact-rich interactions with the environment, requiring the joint modeling of contact force and robot position. However, recent visuomotor policies often focus solely on position or force control, overlooking their integration. In this work, we propose a unified policy for legged robots that jointly models force and position control learned without reliance on force sensors. By simulating diverse combinations of active position and force commands alongside external disturbances force, we use reinforcement learning to learn a policy that estimates forces from the robot's historical states and compensates for them through position and velocity adjustments. Such a policy enables a wide range of manipulation behaviors under varying combinations of force and position inputs, including position tracking, force application, force tracking, and compliant robot behaviors. Additionally, we demonstrate that the learned policy enhances trajectory-based imitation learning pipelines by incorporating essential contact information through its force estimation module, achieving approximately ~39.5% higher success rates across four challenging contact-rich manipulation tasks compared to position-control policies. Extensive experiments on both a quadrupedal mobile manipulation platform and a humanoid validate the versatility and robustness of the proposed policy across diverse scenarios.
 
 body:
-  - title: Method
+  # - title: Method
+  #   text: |
+  #     <div className="uk-responsive-width">
+  #       <img src="pipeline.png" alt="Method" />
+  #     </div>
+  #     Our goal is to learn a policy that enables dexterous robotic hands to accurately replicate given human hand–object interaction trajectories in simulation, while satisfying the task's semantic manipulation constraints. The key insight of <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>UnifiedForce</span> is to approach this transfer as a two-stage process: first, a pre-training trajectory imitation stage focusing solely on hand motion, and second, a specific action fine-tuning stage that addresses interaction constraints. In the initial stage, we develop a robust generalist model, pre-trained on large-scale human demonstrations, which learns to mimic human hand motions accurately. Building upon this, we then employ a residual learning module to refine the robot's actions incrementally. This refinement concentrates on two critical aspects: (1) ensuring stable contact with object surfaces under physical constraints to enable effective object manipulation, and (2) coordinating both hands to achieve precise, high-fidelity execution of complex bimanual operations.
+  - title: Unified Force-Position Policy
     text: |
-      <div className="uk-responsive-width">
-        <img src="pipeline.png" alt="Method" />
-      </div>
-      Our goal is to learn a policy that enables dexterous robotic hands to accurately replicate given human hand–object interaction trajectories in simulation, while satisfying the task's semantic manipulation constraints. The key insight of <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>ManipTrans</span> is to approach this transfer as a two-stage process: first, a pre-training trajectory imitation stage focusing solely on hand motion, and second, a specific action fine-tuning stage that addresses interaction constraints. In the initial stage, we develop a robust generalist model, pre-trained on large-scale human demonstrations, which learns to mimic human hand motions accurately. Building upon this, we then employ a residual learning module to refine the robot's actions incrementally. This refinement concentrates on two critical aspects: (1) ensuring stable contact with object surfaces under physical constraints to enable effective object manipulation, and (2) coordinating both hands to achieve precise, high-fidelity execution of complex bimanual operations.
-  - title: Simulation Results
-    text: |
-      <center>Single hand manipulation results.</center>
+      <center>Diverse skills facilitated by our policy.</center>
       <style>
         .uk-width-2-5 {
-          width: 38%;
+          width: 48%;
+        }
+      </style>
+      <div uk-slider>
+        <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
+          <div class="uk-width-2-5">
+            <div>
+            <p class="uk-text-center">Force Control</p>
+              <video
+                src="Compressed/Corl_PF_web2.mp4"
+                loop
+                muted
+                uk-video="autoplay:inview"
+                />
+            </div>
+          </div>
+          <div class="uk-width-2-5">
+            <div>
+            <p class="uk-text-center">Force Tracking</p>
+              <video
+                src="Compressed/Corl_PF_web3.mp4"
+                loop
+                muted
+                uk-video="autoplay:inview"
+                />
+            </div>
+          </div>
+          <div class="uk-width-2-5">
+            <p class="uk-text-center">Impedance Control</p>
+            <div>
+              <video
+                src="Compressed/Corl_PF_web4.mp4"
+                loop
+                muted
+                uk-video="autoplay:inview"
+                />
+            </div>
+          </div>
+          <div class="uk-width-2-5">
+            <p class="uk-text-center">Base Force Tracking</p>
+            <div>
+              <video
+                src="Compressed/Corl_PF_web5.mp4"
+                loop
+                muted
+                uk-video="autoplay:inview"
+                />
+            </div>
+          </div>
+          <div class="uk-width-2-5">
+            <p class="uk-text-center">Force Control</p>
+            <div>
+              <video
+                src="Compressed/Corl_PF_web7.mp4"
+                loop
+                muted
+                uk-video="autoplay:inview"
+                />
+            </div>
+          </div>
+        </div>
+        <div class="uk-flex uk-flex-center uk-margin-small">
+          <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
+        </div>
+      </div>
+
+      <center>Imitation learning results.</center>
+      <style>
+        .uk-width-2-5 {
+          width: 48%;
         }
       </style>
       <div uk-slider>
@@ -78,7 +143,7 @@ body:
           <div class="uk-width-2-5">
             <div>
               <video
-                src="ManipTrans_supp-5.mp4"
+                src="Compressed/Corl_PF_web8.mp4"
                 loop
                 muted
                 uk-video="autoplay:inview"
@@ -88,46 +153,32 @@ body:
           <div class="uk-width-2-5">
             <div>
               <video
-                src="ManipTrans_supp-6.mp4"
+                src="Compressed/Corl_PF_web9.mp4"
                 loop
                 muted
                 uk-video="autoplay:inview"
                 />
             </div>
           </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="ManipTrans_supp-7.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="ManipTrans_supp-8.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-        </div>
+          
         <div class="uk-flex uk-flex-center uk-margin-small">
           <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
           <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
         </div>
       </div>
-      <center>Bimanual manipulation results.</center>
+
+      <center>Cross Embodiment.</center>
+      <style>
+        .uk-width-2-5 {
+          width: 48%;
+        }
+      </style>
       <div uk-slider>
         <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
           <div class="uk-width-2-5">
             <div>
               <video
-                src="ManipTrans_supp-1.mp4"
+                src="Compressed/Corl_PF_web1.mp4"
                 loop
                 muted
                 uk-video="autoplay:inview"
@@ -137,52 +188,21 @@ body:
           <div class="uk-width-2-5">
             <div>
               <video
-                src="ManipTrans_supp-2.mp4"
+                src="Compressed/Corl_PF_web6.mp4"
                 loop
                 muted
                 uk-video="autoplay:inview"
                 />
             </div>
           </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="ManipTrans_supp-4.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="ManipTrans_supp-3.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="ManipTrans_supp-9.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-        </div>
+          
         <div class="uk-flex uk-flex-center uk-margin-small">
           <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
           <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
         </div>
       </div>
 
-
-  - title: Real-world Results
+  - title: Whole-Body Manipulation Tasks
     text: |
       <center>Use custom-designed 90° flange.</center>
       <div uk-slider>
@@ -190,7 +210,7 @@ body:
           <div class="uk-width-2-5">
             <div>
               <video
-                src="real_maniptrans_4.mp4"
+                src="Compressed/Corl_PF_web11_1.mp4"
                 loop
                 muted
                 uk-video="autoplay:inview"
@@ -200,7 +220,7 @@ body:
           <div class="uk-width-2-5">
             <div>
               <video
-                src="real_maniptrans_6.mp4"
+                src="Compressed/Corl_PF_web11_2.mp4"
                 loop
                 muted
                 uk-video="autoplay:inview"
@@ -210,7 +230,17 @@ body:
           <div class="uk-width-2-5">
             <div>
               <video
-                src="real_maniptrans_5.mp4"
+                src="Compressed/Corl_PF_web11_3.mp4"
+                loop
+                muted
+                uk-video="autoplay:inview"
+                />
+            </div>
+          </div>
+          <div class="uk-width-2-5">
+            <div>
+              <video
+                src="Compressed/Corl_PF_web11_4.mp4"
                 loop
                 muted
                 uk-video="autoplay:inview"
@@ -223,57 +253,6 @@ body:
           <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
         </div>
       </div>
-      <center>Directly mount the dexterous hand.</center>
-      <div uk-slider>
-        <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@m uk-grid">
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="real_maniptrans_0.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="real_maniptrans_3.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="real_maniptrans_2.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="real_maniptrans_1.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-        </div>
-        <div class="uk-flex uk-flex-center uk-margin-small">
-          <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
-        </div>
-      </div>
-      
-
 
   # - title: Media examples
   #   text: |
@@ -509,4 +488,3 @@ projects: # relevant projects
     img: https://getuikit.com/docs/images/light.jpg
     journal: "ABCD'23"
     url: https://denkiwakame.github.io/academic-project-template/
-

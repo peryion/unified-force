@@ -66,12 +66,12 @@ export default class Header extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'ManipTrans';
+    document.title = 'UnifiedForce';
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.title !== this.props.title) {
-      document.title = 'ManipTrans';
+      document.title = 'UnifiedForce';
     }
   }
 
