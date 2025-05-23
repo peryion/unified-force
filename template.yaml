@@ -14,6 +14,8 @@ title: |
     </div>
   </div>
 
+title_meta: 'UniFP: Learning Unified Force and Position Control for Legged Loco-Manipulation'
+
 journal: ''
 resources:
   paper: https://unifid_force.github.io/
