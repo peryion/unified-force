@@ -3,7 +3,17 @@ organization: Pixel Genius Labs
 twitter: '@denkivvakame'
 # title: '<span style="color: #BA8DE2; font-variant: small-caps; font-weight: bold;">UnifiedForce</span>: Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning'
 # title: "<span style='color: #BA8DE2; font-family: 'Times New Roman', Times, serif; font-variant: small-caps; font-weight: bold;'>UnifiedForce</span>: Efficient Dexterous Bimanual Manipulation Transfer via Residual Learning"
-title: '<span style=''font-family: "Times New Roman", Times, serif;''><div><span style='' background-color: white; border: 2px solid white; border-radius: 10px; padding: 0 5px; font-variant: small-caps; font-weight: bold; font-size: 1.5em;''><span style=''color: #969b91;''>Manip</span><span style=''color: #f5b98c;''>Trans</span></span></div>Learning Unified Force and Position Control for Legged Loco-Manipulation</span>'
+title: |
+  <div style="font-family: 'Times New Roman', Times, serif; background-color: #ffffff; padding: 15px 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); text-align: center;">
+    <div style="font-variant: small-caps; font-weight: bold; font-size: 2em; letter-spacing: 0.5px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <img src="favicon_io/android-chrome-192x192.png" alt="Logo" style="height: 1.2em; vertical-align: middle;" />
+      <span><span style="color: #2a6ecf;">Uni</span><span style="color: #f98b3d;">FP</span></span>
+    </div>
+    <div style="margin-top: 5px; font-size: 1.1em; color: #333;">
+      Learning Unified Force and Position Control for Legged Loco-Manipulation
+    </div>
+  </div>
+
 journal: ''
 resources:
   paper: https://unifid_force.github.io/
@@ -51,7 +61,25 @@ bibtex: >
 
 teaser: Corl_PF_web_.mp4
 abstract: |
-  Robotic loco-manipulation tasks often involve contact-rich interactions with the environment, requiring the joint modeling of contact force and robot position. However, recent visuomotor policies often focus solely on position or force control, overlooking their integration. In this work, we propose a unified policy for legged robots that jointly models force and position control learned without reliance on force sensors. By simulating diverse combinations of active position and force commands alongside external disturbances force, we use reinforcement learning to learn a policy that estimates forces from the robot's historical states and compensates for them through position and velocity adjustments. Such a policy enables a wide range of manipulation behaviors under varying combinations of force and position inputs, including position tracking, force application, force tracking, and compliant robot behaviors. Additionally, we demonstrate that the learned policy enhances trajectory-based imitation learning pipelines by incorporating essential contact information through its force estimation module, achieving approximately ~39.5% higher success rates across four challenging contact-rich manipulation tasks compared to position-control policies. Extensive experiments on both a quadrupedal mobile manipulation platform and a humanoid validate the versatility and robustness of the proposed policy across diverse scenarios.
+  <div style="background-color: #faf9f5; padding: 20px 25px; border-radius: 10px; font-size: 1.0em; line-height: 1.6; color: #333;">
+  <p>
+    Robotic <strong>loco-manipulation</strong> tasks often involve contact-rich interactions with the environment, requiring the joint modeling of contact force and robot position.
+    However, recent visuomotor policies often focus solely on position or force control, overlooking their integration.
+  </p>
+  <p>
+    In this work, we propose a <strong>unified policy</strong> for legged robots that jointly models <strong>force</strong> and <strong>position control</strong> learned without reliance on <strong>force sensors</strong>.
+    By simulating diverse combinations of active position and force commands alongside external disturbance forces,
+    we use reinforcement learning to learn a policy that estimates forces from the robot’s historical states and compensates for them through <strong>position</strong> and velocity adjustments.
+  </p>
+  <p>
+    Such a policy enables a wide range of <strong>manipulation behaviors</strong> under varying combinations of force and position inputs, including <strong>position tracking</strong>, <strong>force application</strong>, <strong>force tracking</strong>, and <strong>compliant robot behaviors</strong>.
+    Additionally, we demonstrate that the learned policy enhances trajectory-based imitation learning pipelines by incorporating essential contact information through its force estimation module,
+    achieving approximately <strong>~39.5%</strong> higher success rates across four challenging contact-rich manipulation tasks compared to position-control policies.
+  </p>
+  <p>
+    Extensive experiments on both a <strong>quadrupedal</strong> mobile manipulation platform and a <strong>humanoid</strong> validate the versatility and robustness of the proposed policy across diverse scenarios.
+  </p>
+  </div>
 
 body:
   # - title: Method
@@ -62,7 +90,9 @@ body:
   #     Our goal is to learn a policy that enables dexterous robotic hands to accurately replicate given human hand–object interaction trajectories in simulation, while satisfying the task's semantic manipulation constraints. The key insight of <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>UnifiedForce</span> is to approach this transfer as a two-stage process: first, a pre-training trajectory imitation stage focusing solely on hand motion, and second, a specific action fine-tuning stage that addresses interaction constraints. In the initial stage, we develop a robust generalist model, pre-trained on large-scale human demonstrations, which learns to mimic human hand motions accurately. Building upon this, we then employ a residual learning module to refine the robot's actions incrementally. This refinement concentrates on two critical aspects: (1) ensuring stable contact with object surfaces under physical constraints to enable effective object manipulation, and (2) coordinating both hands to achieve precise, high-fidelity execution of complex bimanual operations.
   - title: Unified Force-Position Policy
     text: |
-      <center>Diverse skills facilitated by our policy.</center>
+      <div style="text-align: center; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+        Diverse skills facilitated by our policy.
+      </div>
       <style>
         .uk-width-2-5 {
           width: 48%;
@@ -132,7 +162,9 @@ body:
         </div>
       </div>
 
-      <center>Imitation learning results.</center>
+      <div style="text-align: center; font-weight: bold; margin-bottom: 20px;">
+        Imitation learning results.
+      </div>
       <style>
         .uk-width-2-5 {
           width: 48%;
@@ -167,7 +199,9 @@ body:
         </div>
       </div>
 
-      <center>Cross Embodiment.</center>
+      <div style="text-align: center; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+        Cross Embodiment.
+      </div>
       <style>
         .uk-width-2-5 {
           width: 48%;
@@ -204,7 +238,6 @@ body:
 
   - title: Whole-Body Manipulation Tasks
     text: |
-      <center>Use custom-designed 90° flange.</center>
       <div uk-slider>
         <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@m uk-grid">
           <div class="uk-width-2-5">

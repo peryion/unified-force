@@ -18,6 +18,11 @@ export default class Footer extends React.Component {
             {' '}
             Academic Project Page Template{' '}
           </a>
+          &
+          <a href="https://maniptrans.github.io/" target="_blank">
+            {' '}
+            ManipTrains{' '}
+          </a>
         </p>
       </div>
     );
