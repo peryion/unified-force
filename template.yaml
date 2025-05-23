@@ -21,10 +21,10 @@ resources:
   code: https://unifid_force.github.io/
   # video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
   demo: # https://colab.research.google.com/
-description: academic projectpage template that supports markdown and KaTeX
+description: A unified policy for legged robots that jointly models force and position control learned without reliance on force sensors.
 
-image: https://denkiwakame.github.io/academic-project-template/teaser.jpg
-url: https://denkiwakame.github.io/academic-project-template
+image: https://github.com/peryion/unified-force/blob/project-page/public/favicon_io/android-chrome-512x512.png
+url: https://github.com/peryion/unified-force
 speakerdeck: # speakerdeck slide ID
 authors:
   - name: Peiyuan Zhi
