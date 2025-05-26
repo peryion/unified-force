@@ -113,7 +113,7 @@ class Template extends React.Component {
           ]}
         />
         <Header
-          title={data.title_meta}
+          title={data.title}
           journal={data.journal}
           conference={data.conference}
           authors={data.authors}

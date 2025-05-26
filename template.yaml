@@ -18,9 +18,9 @@ title_meta: 'UniFP: Learning Unified Force and Position Control for Legged Loco-
 
 journal: ''
 resources:
-  paper: https://unifid_force.github.io/
-  arxiv: https://unifid_force.github.io/
-  code: https://unifid_force.github.io/
+  paper: https://peryion.github.io/unified-force/
+  arxiv: https://peryion.github.io/unified-force/
+  code: https://peryion.github.io/unified-force/
   # video: https://www.youtube.com/embed/onbnb_D1wC8?si=xJczUv716Lt5aO4l&amp;start=1150
   demo: # https://colab.research.google.com/
 description: A unified policy for legged robots that jointly models force and position control learned without reliance on force sensors.
@@ -36,11 +36,11 @@ authors:
   - name: Peiyang Li
     affiliation: [1, 2]
     position: Research Intern
-    url: https://unifid_force.github.io/
+    url: https://peryion.github.io/unified-force/
   - name: Jianqin Yin
     affiliation: [2]
     position: Researcher
-    url: https://unifid_force.github.io/
+    url: https://peryion.github.io/unified-force/
   - name: Baoxiong Jia
     affiliation: [1]
     position: Researcher
@@ -65,21 +65,13 @@ teaser: Corl_PF_web_.mp4
 abstract: |
   <div style="background-color: #faf9f5; padding: 20px 25px; border-radius: 10px; font-size: 1.0em; line-height: 1.6; color: #333;">
   <p>
-    Robotic <strong>loco-manipulation</strong> tasks often involve contact-rich interactions with the environment, requiring the joint modeling of contact force and robot position.
-    However, recent visuomotor policies often focus solely on position or force control, overlooking their integration.
-  </p>
-  <p>
-    In this work, we propose a <strong>unified policy</strong> for legged robots that jointly models <strong>force</strong> and <strong>position control</strong> learned without reliance on <strong>force sensors</strong>.
-    By simulating diverse combinations of active position and force commands alongside external disturbance forces,
-    we use reinforcement learning to learn a policy that estimates forces from the robot’s historical states and compensates for them through <strong>position</strong> and velocity adjustments.
-  </p>
-  <p>
+    Robotic <strong>loco-manipulation</strong> requires coordinated control of both contact <strong>force</strong> and <strong>position</strong>, yet many <strong>visuomotor policies</strong> treat them separately.
+    We propose a <strong>unified control policy</strong> for <strong>legged robots</strong> that jointly models <strong>force and position</strong> — learned <strong>without force sensors</strong>.
+    By simulating diverse interactions, the policy estimates contact forces from past states and compensates via <strong>position</strong> and <strong>velocity</strong> adjustments.
     Such a policy enables a wide range of <strong>manipulation behaviors</strong> under varying combinations of force and position inputs, including <strong>position tracking</strong>, <strong>force application</strong>, <strong>force tracking</strong>, and <strong>compliant robot behaviors</strong>.
     Additionally, we demonstrate that the learned policy enhances trajectory-based imitation learning pipelines by incorporating essential contact information through its force estimation module,
     achieving approximately <strong>~39.5%</strong> higher success rates across four challenging contact-rich manipulation tasks compared to position-control policies.
-  </p>
-  <p>
-    Extensive experiments on both a <strong>quadrupedal</strong> mobile manipulation platform and a <strong>humanoid</strong> validate the versatility and robustness of the proposed policy across diverse scenarios.
+    Experiments on both a <strong>quadruped</strong> and a <strong>humanoid</strong> demonstrate the <strong>robustness</strong> and <strong>versatility</strong> of our method across diverse scenarios.
   </p>
   </div>
 
@@ -92,200 +84,93 @@ body:
   #     Our goal is to learn a policy that enables dexterous robotic hands to accurately replicate given human hand–object interaction trajectories in simulation, while satisfying the task's semantic manipulation constraints. The key insight of <span style='font-family: \"Times New Roman\", Times, serif; font-variant: small-caps; font-weight: bold; font-size: 1.0em;'>UnifiedForce</span> is to approach this transfer as a two-stage process: first, a pre-training trajectory imitation stage focusing solely on hand motion, and second, a specific action fine-tuning stage that addresses interaction constraints. In the initial stage, we develop a robust generalist model, pre-trained on large-scale human demonstrations, which learns to mimic human hand motions accurately. Building upon this, we then employ a residual learning module to refine the robot's actions incrementally. This refinement concentrates on two critical aspects: (1) ensuring stable contact with object surfaces under physical constraints to enable effective object manipulation, and (2) coordinating both hands to achieve precise, high-fidelity execution of complex bimanual operations.
   - title: Unified Force-Position Policy
     text: |
+      <!-- Section 1: Diverse skills -->
       <div style="text-align: center; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
         Diverse skills facilitated by our policy.
       </div>
-      <style>
-        .uk-width-2-5 {
-          width: 48%;
-        }
-      </style>
-      <div uk-slider>
-        <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
-          <div class="uk-width-2-5">
-            <div>
-            <p class="uk-text-center">Force Control</p>
-              <video
-                src="Compressed/Corl_PF_web2.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-            <p class="uk-text-center">Force Tracking</p>
-              <video
-                src="Compressed/Corl_PF_web3.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <p class="uk-text-center">Impedance Control</p>
-            <div>
-              <video
-                src="Compressed/Corl_PF_web4.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <p class="uk-text-center">Base Force Tracking</p>
-            <div>
-              <video
-                src="Compressed/Corl_PF_web5.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <p class="uk-text-center">Force Control</p>
-            <div>
-              <video
-                src="Compressed/Corl_PF_web7.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
+      <div class="uk-grid-small uk-child-width-1-3@s uk-child-width-1-2@m" uk-grid>
+        <div>
+          <p class="uk-text-center">Force Control</p>
+          <video src="Compressed/Corl_PF_web2.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
         </div>
-        <div class="uk-flex uk-flex-center uk-margin-small">
-          <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
+        <div>
+          <p class="uk-text-center">Force Tracking</p>
+          <video src="Compressed/Corl_PF_web3.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
+        </div>
+        <div>
+          <p class="uk-text-center">Impedance Control</p>
+          <video src="Compressed/Corl_PF_web4.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
+        </div>
+        <div>
+          <p class="uk-text-center">Base Force Tracking</p>
+          <video src="Compressed/Corl_PF_web5.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
+        </div>
+        <div>
+          <p class="uk-text-center">Force Control</p>
+          <video src="Compressed/Corl_PF_web7.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
+        </div>
+        <div>
+          <p class="uk-text-center">Base Force Tracking</p>
+          <video src="Compressed/Corl_PF_web6.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
         </div>
       </div>
 
-      <div style="text-align: center; font-weight: bold; margin-bottom: 20px;">
+      <!-- Section 2: Imitation learning -->
+      <div style="text-align: center; font-weight: bold; margin-top: 40px; margin-bottom: 20px;">
         Imitation learning results.
       </div>
-      <style>
-        .uk-width-2-5 {
-          width: 48%;
-        }
-      </style>
-      <div uk-slider>
-        <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="Compressed/Corl_PF_web8.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="Compressed/Corl_PF_web9.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          
-        <div class="uk-flex uk-flex-center uk-margin-small">
-          <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
+      <div class="uk-grid-small uk-child-width-1-3@s uk-child-width-1-2@m" uk-grid>
+        <div>
+          <video src="Compressed/Corl_PF_web8.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
+        </div>
+        <div>
+          <video src="Compressed/Corl_PF_web9.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
         </div>
       </div>
 
-      <div style="text-align: center; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+      <!-- Section 3: Cross Embodiment -->
+      <div style="text-align: center; font-weight: bold; margin-top: 40px; margin-bottom: 20px;">
         Cross Embodiment.
       </div>
-      <style>
-        .uk-width-2-5 {
-          width: 48%;
-        }
-      </style>
-      <div uk-slider>
-        <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="Compressed/Corl_PF_web1.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="Compressed/Corl_PF_web6.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          
-        <div class="uk-flex uk-flex-center uk-margin-small">
-          <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
+      <div class="uk-grid-small uk-child-width-1-3@s uk-child-width-1-2@m" uk-grid>
+        <div>
+          <video src="Compressed/Corl_PF_web1.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
+        </div>
+        <div>
+          <video src="Compressed/Corl_PF_web6.mp4" loop muted autoplay playsinline style="width: 100%; border-radius: 8px;"></video>
         </div>
       </div>
 
   - title: Whole-Body Manipulation Tasks
     text: |
-      <div uk-slider>
-        <div class="uk-slider-items uk-child-width-1-1 uk-child-width-1-2@m uk-grid">
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="Compressed/Corl_PF_web11_1.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="Compressed/Corl_PF_web11_2.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="Compressed/Corl_PF_web11_3.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
-          <div class="uk-width-2-5">
-            <div>
-              <video
-                src="Compressed/Corl_PF_web11_4.mp4"
-                loop
-                muted
-                uk-video="autoplay:inview"
-                />
-            </div>
-          </div>
+      <div class="uk-grid-small uk-child-width-1-2@s uk-grid-match" uk-grid>
+        <div>
+          <video
+            src="Compressed/Corl_PF_web11_1.mp4"
+            loop muted autoplay playsinline
+            style="width: 100%; border-radius: 8px;"
+          ></video>
         </div>
-        <div class="uk-flex uk-flex-center uk-margin-small">
-          <a class="uk-icon-button" href uk-slidenav-previous uk-slider-item="previous"></a>
-          <a class="uk-icon-button uk-margin-small-left" href uk-slidenav-next uk-slider-item="next"></a>
+        <div>
+          <video
+            src="Compressed/Corl_PF_web11_2.mp4"
+            loop muted autoplay playsinline
+            style="width: 100%; border-radius: 8px;"
+          ></video>
+        </div>
+        <div>
+          <video
+            src="Compressed/Corl_PF_web11_3.mp4"
+            loop muted autoplay playsinline
+            style="width: 100%; border-radius: 8px;"
+          ></video>
+        </div>
+        <div>
+          <video
+            src="Compressed/Corl_PF_web11_4.mp4"
+            loop muted autoplay playsinline
+            style="width: 100%; border-radius: 8px;"
+          ></video>
         </div>
       </div>
 
